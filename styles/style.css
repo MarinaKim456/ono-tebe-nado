@@ -116,7 +116,7 @@ button{
     letter-spacing: 30px;
 }
 
-.delete_last_interval {   /*удаляем интервал между "на" и "до"*/
+.delete_last_interval {  /*удаляем интервал между "на" и "до"*/
     margin-left: -30px;
 } 
 
