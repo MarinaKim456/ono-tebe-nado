@@ -11,7 +11,7 @@ body {
     margin-top: 92px;
     margin-left: 24px;
     margin-right: 24px;
-   }
+}
 
 .header_menu {
     display: flex;
@@ -44,6 +44,7 @@ body {
 }
 
 .link {
+    display: block;
     text-underline-offset: 5px;
     text-decoration-skip-ink: none;
 }
@@ -60,7 +61,7 @@ body {
 .address {   
     font-style: normal;
     text-decoration: none;
-  }
+}
 
 .header_contacts {
     margin-left: 184px;
@@ -85,6 +86,7 @@ body {
     object-fit: cover;
     filter: brightness(40%);
 }
+
 .img_cover {
     height: 757px;
 }
@@ -98,16 +100,20 @@ body {
     letter-spacing: 30px;   /* ниже отдельно прописаны line-height для каждого слова */
 }
 
-.big_interval {
-    letter-spacing: 60px;
+.interval {
+    display: inline-block;
+}
+
+.no_interval {    
+    letter-spacing: 0px;
 }
 
 .small_interval {
-    letter-spacing: 30px;
-}
+    letter-spacing: 5px;
+} 
 
-.delete_last_interval {  /*удаляем интервал между "на" и "до"*/
-    margin-left: -30px;
+.big_interval {
+    letter-spacing: 29px;
 }
 
 .line_height {
@@ -124,7 +130,7 @@ body {
     line-height: 100px;
 }
 
-.nado{
+.nado{   
     margin-left: 633px;
     line-height: 100px;
 }
@@ -171,6 +177,10 @@ body {
     margin-bottom: 30px;
 }
 
+.delete_link_text-underline {
+    text-decoration: none;
+}
+
 .lots_item_list > :nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -180,8 +190,7 @@ body {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-left: 40px;
-    
+    margin-left: 40px;    
     line-height: 47px;
 }
 
@@ -190,7 +199,21 @@ body {
     max-width: 334px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;    
+    justify-content: space-between;
+    background-size: cover;
+    background-position: center;
+}
+
+.film_of_Thomas_Anderson {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-01.jpg");
+}
+
+.book_of_James_Joyce {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-02.jpg");
+}
+
+.Kandinsky_picture {
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-03.jpg");
 }
 
 .lots_title {
@@ -200,13 +223,12 @@ body {
     line-height: 26px;
     color: white;
     text-decoration: underline;
-    text-underline-position: under;
+    text-underline-offset: 3px;
     text-transform: uppercase;
     margin: 51px 40px 0 40px;
 }
 
 .lots_text {
-    position: relative;
     font-size: 20px;
     font-weight: 400;
     line-height: 24px;
@@ -214,24 +236,6 @@ body {
     align-self: flex-end;
     margin: 0px 40px 48px 40px;
     text-decoration: none;
-}
-
-.film_of_Thomas_Anderson {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-01.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.book_of_James_Joyce {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-02.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.Kandinsky_picture {
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/card-lot-03.jpg");
-    background-size: cover;
-    background-position: center;
 }
 
 .lots__look-more-link{
@@ -255,7 +259,7 @@ body {
     "white_logo about_title"
     ".  first_article"
     ".  second_article";
- }
+}
 
  .circle {
     grid-area: white_logo;
@@ -269,7 +273,7 @@ body {
     margin-top: 35px;
     margin-left: 47px;
     margin-right: 72px;
- }
+}
 
 .white_logo {
     position: relative;
