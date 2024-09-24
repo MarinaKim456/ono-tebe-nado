@@ -69,6 +69,8 @@ body {
 }
 
 .cover {
+    display: flex;
+    flex-direction: column;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("../images/cover.jpg");
     background-size: cover;
     background-position: center;
@@ -77,13 +79,14 @@ body {
     min-height: 757px;
     width: 1100px;
     color: white;
-    text-transform: uppercase;
     margin: 96px 0 179px 0;
 }
 
 .overlay {
     position: absolute;
-    object-fit: cover;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     filter: brightness(40%);
 }
 
@@ -92,47 +95,37 @@ body {
 }
 
 .cover__title {
+    display: grid;
     position: relative;
-    padding-top: 165px;
+    z-index: 4;
+    padding: 165px 50px 50px;
     margin-bottom: 125px;
     font-size: 100px;
     font-weight: 700;
-    letter-spacing: 30px;   /* ниже отдельно прописаны line-height для каждого слова */
-}
-
-.interval {
-    display: inline-block;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    line-height: 115px;   /* ниже отдельно прописаны line-height для каждого слова */
 }
 
 .no_interval {    
-    letter-spacing: 0px;
+    letter-spacing: 0;
 }
-
-.small_interval {
-    letter-spacing: 5px;
-} 
 
 .big_interval {
-    letter-spacing: 29px;
+    letter-spacing: 60px;
 }
 
-.line_height {
-    line-height: 1.25;
+.aligned-text {
+    display: block;
+    line-height: 126px;
 }
 
-.ono{
-    margin-left: 50px;
-    line-height: 115px;
+.aligned-text-center {
+    text-align: center;
 }
 
-.tebe{
-    margin-left: 335px;
-    line-height: 100px;
-}
-
-.nado{   
-    margin-left: 633px;
-    line-height: 100px;
+.aligned-text-right {
+    text-align: right;
 }
 
 .cover {
@@ -145,6 +138,7 @@ body {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
+    text-transform: uppercase;
     margin-left: 78px;
     font-weight: 400;
     font-size: 22px;
